@@ -1,7 +1,4 @@
-require("babel-register")({
-  presets: ["es2015"]
-});
-
+require("@babel/register");
 var app = require("./app");
 
 var cluster = require("cluster");

@@ -1,6 +1,6 @@
-export const successResponse = (req, res, data) => {
+export const successResponse = (req, res, data, code = 200) => {
   return res.send({
-    code: 200,
+    code,
     data: data,
     success: true
   });

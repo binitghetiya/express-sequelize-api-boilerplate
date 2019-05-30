@@ -30,4 +30,4 @@ app.use("/api", apiMiddleware, apiRoutes);
 app.use("/api/admin", apiMiddleware, adminMiddleware, adminRoutes);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+module.exports = app;

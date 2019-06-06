@@ -1,38 +1,31 @@
-require("@babel/register");
-var app = require("./app");
+require('@babel/register');
+const cluster = require('cluster');
+const app = require('./app');
 
-var cluster = require("cluster");
+if (cluster.isMaster && process.env.NODE_ENV === 'production') {
+  const numWorkers = require('os').cpus().length;
 
-if (cluster.isMaster) {
-  var numWorkers = require("os").cpus().length;
+  console.log(`Master cluster setting up ${numWorkers} workers...`);
 
-  console.log("Master cluster setting up " + numWorkers + " workers...");
-
-  for (var i = 0; i < numWorkers; i++) {
+  for (let i = 0; i < numWorkers; i += 1) {
     cluster.fork();
   }
 
-  cluster.on("online", function(worker) {
-    console.log("Worker " + worker.process.pid + " is online");
+  cluster.on('online', (worker) => {
+    console.log(`Worker ${worker.process.pid} is online`);
   });
 
-  cluster.on("exit", function(worker, code, signal) {
+  cluster.on('exit', (worker, code, signal) => {
     console.log(
-      "Worker " +
-        worker.process.pid +
-        " died with code: " +
-        code +
-        ", and signal: " +
-        signal
+      `Worker ${
+        worker.process.pid
+      } died with code: ${code}, and signal: ${signal}`,
     );
-    console.log("Starting a new worker");
+    console.log('Starting a new worker');
     cluster.fork();
   });
 } else {
-  console.log(process.env.APP_PORT);
-  app.listen(process.env.APP_PORT || 3000, function() {
-    console.log(
-      "Process " + process.pid + " is listening to all incoming requests"
-    );
+  app.listen(process.env.APP_PORT || 3000, () => {
+    console.log(`Process ${process.pid} is listening to all incoming requests`);
   });
 }

@@ -1,16 +1,16 @@
-var Joi = require("joi");
+const Joi = require('joi');
 
 export const getOtherUserProfile = {
   body: {
-    userId: Joi.number().required()
-  }
+    userId: Joi.number().required(),
+  },
 };
 
 export const changePassword = {
   body: {
     oldPassword: Joi.string().required(),
-    newPassword: Joi.string().required()
-  }
+    newPassword: Joi.string().required(),
+  },
 };
 
 export const register = {
@@ -20,8 +20,8 @@ export const register = {
     email: Joi.string()
       .email()
       .required(),
-    password: Joi.string().required()
-  }
+    password: Joi.string().required(),
+  },
 };
 
 export const login = {
@@ -29,6 +29,6 @@ export const login = {
     email: Joi.string()
       .email()
       .required(),
-    password: Joi.string().required()
-  }
+    password: Joi.string().required(),
+  },
 };

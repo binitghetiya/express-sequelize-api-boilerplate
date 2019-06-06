@@ -1,10 +1,11 @@
 import express from 'express';
-const router = express.Router();
-import * as userController from "../controllers/user/user.controller";
+import * as userController from '../controllers/user/user.controller';
 
-//================================
+const router = express.Router();
+
+//= ===============================
 // Admin routes
-//================================
-router.get("/allUsers", userController.allUsers);
+//= ===============================
+router.get('/allUsers', userController.allUsers);
 
 module.exports = router;

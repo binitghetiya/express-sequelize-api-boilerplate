@@ -1,23 +1,24 @@
 import express from 'express';
+import validate from 'express-validation';
+
+import * as userController from '../controllers/user/user.controller';
+import * as userValidator from '../controllers/user/user.validator';
+
 const router = express.Router();
-import validate from "express-validation";
 
-import * as userController from "../controllers/user/user.controller";
-import * as userValidator from "../controllers/user/user.validator";
-
-//================================
+//= ===============================
 // Public routes
-//================================
+//= ===============================
 
 router.post(
-  "/login",
+  '/login',
   validate(userValidator.login),
-  userController.login
+  userController.login,
 );
 router.post(
-  "/register",
+  '/register',
   validate(userValidator.register),
-  userController.register
+  userController.register,
 );
 
 module.exports = router;

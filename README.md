@@ -3,7 +3,7 @@ This is a simple boilerplate for creating APIs with NodeJs express framework.
 Here API access token encapsulated/encrypted with JWT token based system.
  - Sample API ready for login 
  - API middlewares for normal user and Admin user
- - ES16 import/export available to the user with spread operators
+ - ES6 import/export available to the user with spread operators
  - Deploy your app with cluster (cluster implementation is integrated)
  - jest test configured
  - add test case for mock database model/functions to test controllers functions

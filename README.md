@@ -167,8 +167,7 @@ Seeders will create one new client entry in application and 2 users entry one ad
 ```
 ### Upcoming update
 ```
-> suggestions and improvements
-> test cases for API routes
+> suggestions and improvements are most welcome
 ```
 
 ### Contact 

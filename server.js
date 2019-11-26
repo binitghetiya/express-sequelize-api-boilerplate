@@ -1,9 +1,11 @@
 require('@babel/register');
+/* eslint-disable no-console */
 const cluster = require('cluster');
+const os = require('os');
 const app = require('./app');
 
 if (cluster.isMaster && process.env.NODE_ENV === 'production') {
-  const numWorkers = require('os').cpus().length;
+  const numWorkers = os.cpus().length;
 
   console.log(`Master cluster setting up ${numWorkers} workers...`);
 

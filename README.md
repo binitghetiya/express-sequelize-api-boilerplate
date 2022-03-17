@@ -19,7 +19,7 @@ https://github.com/binitghetiya/express-sequelize-api-boilerplate
 ### Project Setup
 Once you clone or download project go into you folder
 
->now cope **.env.local** file to **.env** file
+>now copy **.env.local** file to **.env** file
 
 ### Installing
 ```

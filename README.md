@@ -56,8 +56,8 @@ GOOGLE_CAPTCHA_URL=https://www.google.com/recaptcha/api/siteverify
 ### Migration and Seeders run
 After creating database and updating .env file run below commands
 ```
-> node_modules/.bin/sequelize db:migrate
-> node_modules/.bin/sequelize db:seed:all
+> npm run db:migrate
+> npm run db:seed:all
 ```
 Migration will create table users and seed some default users
 * **users** - this is normal user table with some required fields like (firstName, lastName, email, password, and isAdmin)
@@ -71,11 +71,11 @@ Seeders will create one new client entry in application and 2 users entry one ad
 # Other Information about setup/commands
 ## Useful terminal commands
 ```
-> node_modules/.bin/sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string
-> node_modules/.bin/sequelize db:migrate
-> node_modules/.bin/sequelize db:migrate:undo
-> node_modules/.bin/sequelize db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js
-> node_modules/.bin/sequelize seed:generate --name demo-user
+> npm run model:generate User --attributes firstName:string,lastName:string,email:string
+> npm run db:migrate
+> npm run db:migrate:undo
+> npm run db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js
+> npm run seed:generate demo-user
 ```
 
 ## Git/Bitbucket Setup

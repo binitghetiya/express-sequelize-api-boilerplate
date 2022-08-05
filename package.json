@@ -6,7 +6,15 @@
   "scripts": {
     "test": "jest",
     "test:cover": "jest --coverage",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "model:generate": "npx sequelize-cli model:generate --name",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "seed:generate": "npx sequelize-cli seed:generate --name",
+    "db:seed:all": "npx sequelize-cli db:seed:all",
+    "db:seed:undo": "npx sequelize-cli db:seed:undo",
+    "db:seed:undo:all": "npx sequelize-cli db:seed:undo:all"
   },
   "author": "",
   "license": "ISC",

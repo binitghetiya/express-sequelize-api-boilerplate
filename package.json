@@ -32,7 +32,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^8.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-joi-validator": "^2.0.1",
     "express-validation": "^1.0.2",
     "http": "0.0.0",

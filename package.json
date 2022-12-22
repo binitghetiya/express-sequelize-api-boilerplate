@@ -38,7 +38,7 @@
     "http": "0.0.0",
     "jest": "^24.8.0",
     "joi": "^14.3.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mock-express-response": "^0.2.2",
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.0",

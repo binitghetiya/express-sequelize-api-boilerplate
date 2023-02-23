@@ -43,7 +43,7 @@
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.0",
     "os": "^0.1.1",
-    "sequelize": "^5.15.1",
+    "sequelize": "^6.28.2",
     "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
